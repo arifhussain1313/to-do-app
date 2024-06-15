@@ -1,6 +1,6 @@
 const item = document.querySelector("#item");
 const totdobox = document.querySelector("#to-do-box");
-addEventListener ("keyup", function(event)  {
+item.addEventListener ("keyup", function(event)  {
     if(event.key == "Enter"){
         addToDo(this.value)
         this.value = ""
@@ -9,9 +9,9 @@ addEventListener ("keyup", function(event)  {
 )
 const addToDo = () => {
     const listitem = document.createElement("li");
-    listitem.innerHTML = '
-    ${item} 
-    <i class="fas fa-times"></i>';
+    listitem.innerHTML = `
+    ${item}`;
+   
     listitem.addEventListener("click", function(){
         this.classList.toggle("done");
     })
